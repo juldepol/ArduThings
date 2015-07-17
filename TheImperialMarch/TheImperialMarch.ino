@@ -41,8 +41,9 @@ byte beats[scoreLen] = {4, 4, 4, 3, 1,
                         4, 3, 1, 8};
 
 unsigned int speed = 200; // the time in ms for one beat
+
 void setup() {
-    pinMode(13, OUTPUT);
+    pinMode(13, OUTPUT); //add red LED on pin 13 for epicness
     tone1.begin(3); //prepare pin 3 for playing a tone
     for (int i = 0; i<scoreLen; i++){
      int duration = beats[i] * speed;
